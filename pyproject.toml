@@ -99,4 +99,5 @@ testpaths = ["tests"]
 log_cli = true
 log_cli_level = "INFO"
 # increase default timeout since some RAG pipeline tests can be slow
-timeout = 180
+# bumped this up from 180 - some of my local tests with larger docs were timing out
+timeout = 300
