@@ -84,7 +84,8 @@ target-version = "py310"
 
 [tool.ruff.lint]
 select = ["E", "F", "I", "W"]
-ignore = ["E501"]
+# also ignoring E402 (module level import not at top) since examples often import mid-file
+ignore = ["E501", "E402"]
 
 [tool.mypy]
 python_version = "3.10"
@@ -94,3 +95,6 @@ warn_unused_configs = true
 [tool.pytest.ini_options]
 asyncio_mode = "auto"
 testpaths = ["tests"]
+# show local variables in tracebacks, helpful when debugging test failures
+log_cli = true
+log_cli_level = "INFO"
