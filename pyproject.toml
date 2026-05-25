@@ -97,7 +97,7 @@ asyncio_mode = "auto"
 testpaths = ["tests"]
 # show local variables in tracebacks, helpful when debugging test failures
 log_cli = true
-log_cli_level = "INFO"
+log_cli_level = "DEBUG"
 # increase default timeout since some RAG pipeline tests can be slow
 # bumped this up from 180 - some of my local tests with larger docs were timing out
 timeout = 300
